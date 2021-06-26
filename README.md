@@ -1,5 +1,7 @@
 #### My overly optimized solutions of [Project Euler](https://projecteuler.net) problems, focused on math algorithms and code efficiency
 
+# Benchmark
+
 | Problem                                   | Solution                                                                        | Mean (ns) | Error (ns) | StdDev (ns) | Code Size (B) | Allocated (B) |
 | :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | ---------: | ----------: | ------------: | ------------: |
 | [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) |    16.365 |     0.1251 |      0.1170 |            96 | -             |
