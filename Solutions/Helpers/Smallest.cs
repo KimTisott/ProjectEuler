@@ -2,9 +2,9 @@
 {
     public static partial class Helpers
     {
-        public static ulong NaturalNumbersSum(ulong a)
+        public static ulong Smallest(ulong a, ulong b)
         {
-            return a * (a + 1) >> 1;
+            return a < b ? a : b;
         }
     }
 }
