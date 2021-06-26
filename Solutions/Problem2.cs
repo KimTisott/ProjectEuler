@@ -2,11 +2,10 @@
 
 namespace ProjectEuler
 {
-    [DisassemblyDiagnoser, MemoryDiagnoser]
-    public class Problem2
+    public partial class Solutions
     {
         [Arguments(4000000), Benchmark]
-        public ulong Solution1(ulong p1)
+        public ulong Problem2(ulong p1)
         {
             ulong result, previous = 2, current = 8, next;
 
