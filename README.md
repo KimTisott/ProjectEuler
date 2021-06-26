@@ -1,6 +1,6 @@
 ﻿### My overly optimized solutions of [Project Euler](https://projecteuler.net) problems, focused on math algorithms and code efficiency
 
-| Problem                                   | Solution                                                                        | Mean      | Error     | StdDev    | Code Size | Gen 0 | Gen 1 | Gen 2 | Allocated |
+| ID                                        | Sol                                                                             | Mean      | Error     | StdDev    | Code Size | Gen 0 | Gen 1 | Gen 2 | Allocated |
 | :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | --------: | --------: | --------: | ----: | ----: | ----: | --------: |
 | [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) | 16.39  ns | 0.129  ns | 0.108  ns |      96 B | -     | -     | -     | -         |
 | [2](https://projecteuler.net/problem=2)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem2.cs) |  2.606 ns | 0.0201 ns | 0.0178 ns |      41 B | -     | -     | -     | -         |
