@@ -55,6 +55,8 @@
 | [49](https://projecteuler.net/problem=49) |
 | [50](https://projecteuler.net/problem=50) |
 
+Performance improvements and suggestions can be submitted [here](https://github.com/KimTisott/ProjectEuler/issues/new).
+
 ### References
 
 <a href="https://projecteuler.net">
