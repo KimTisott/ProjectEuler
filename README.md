@@ -2,7 +2,7 @@
 
 | Problem                                   | Solution                                                                        | Mean      | Error     | StdDev    | Code Size | Gen 0 | Allocated |
 | :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | --------: | --------: | --------: | ----: | --------: |
-| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) | 16.39  ns | 0.129  ns | 0.108  ns |      96 B | -     | -         |
+| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) | 16.390 ns | 0.1290 ns | 0.1080 ns |      96 B | -     | -         |
 | [2](https://projecteuler.net/problem=2)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem2.cs) |  2.606 ns | 0.0201 ns | 0.0178 ns |      41 B | -     | -         |
 | [3](https://projecteuler.net/problem=3)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem3.cs) |  4.671 us | 0.0212 us | 0.0198 us |      68 B | -     | -         |
 | [4](https://projecteuler.net/problem=4)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem4.cs) |  5.361 us | 0.0188 us | 0.0167 us |     294 B | -     | -         |
