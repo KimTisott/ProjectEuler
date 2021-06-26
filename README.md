@@ -1,4 +1,4 @@
-﻿### My overly optimized solutions of [Project Euler](https://projecteuler.net) problems, focused on math algorithms and code efficiency
+#### My overly optimized solutions of [Project Euler](https://projecteuler.net) problems, focused on math algorithms and code efficiency
 
 | Problem                                   | Solution                                                                        | Mean      | Error     | StdDev    | Code Size | Gen 0 | Allocated |
 | :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | --------: | --------: | --------: | ----: | --------: |
