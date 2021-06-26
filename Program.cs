@@ -7,7 +7,10 @@ namespace ProjectEuler
     {
         static void Main()
         {
-            BenchmarkRunner.Run<Solutions>();
+            BenchmarkRunner.Run<Solutions>();// (typeof(Solutions), methods: new System.Reflection.MethodInfo[] { typeof(Solutions).GetMethod(nameof(Solutions.Problem7)) });
+
+            //var s = new Solutions();
+            //s.Problem7(10001);
         }
     }
 
