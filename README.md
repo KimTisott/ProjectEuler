@@ -1,12 +1,12 @@
 #### My overly optimized solutions of [Project Euler](https://projecteuler.net) problems, focused on math algorithms and code efficiency
 
-| Problem                                   | Solution                                                                        | Mean (ns) | Error (ns) | StdDev (ns) | Code Size (B) |
-| :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | ---------: | ----------: | ------------: |
-| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) |    16.860 |     0.3633 |      0.3568 |            96 |
-| [2](https://projecteuler.net/problem=2)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem2.cs) |     2.625 |     0.0160 |      0.0149 |            41 |
-| [3](https://projecteuler.net/problem=3)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem3.cs) | 4,819.873 |    60.7762 |     56.8501 |            68 |
-| [4](https://projecteuler.net/problem=4)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem4.cs) | 5,558.401 |    48.8652 |     38.1508 |           294 |
-| [5](https://projecteuler.net/problem=5)   | 
+| Problem                                   | Solution                                                                        | Mean (ns) | Error (ns) | StdDev (ns) | Code Size (B) | Allocated (B) |
+| :---------------------------------------: | :-----------------------------------------------------------------------------: | --------: | ---------: | ----------: | ------------: | ------------: |
+| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs) |    16.365 |     0.1251 |      0.1170 |            96 | -             |
+| [2](https://projecteuler.net/problem=2)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem2.cs) |     2.598 |     0.0136 |      0.0114 |            41 | -             |
+| [3](https://projecteuler.net/problem=3)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem3.cs) | 4,665.485 |    18.5540 |     17.3554 |            68 | -             |
+| [4](https://projecteuler.net/problem=4)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem4.cs) | 5,350.558 |    14.9574 |     12.4901 |           294 | -             |
+| [5](https://projecteuler.net/problem=5)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem5.cs) |   364.266 |     1.2478 |      1.1672 |            70 | -             |
 | [6](https://projecteuler.net/problem=6)   | 
 | [7](https://projecteuler.net/problem=7)   | 
 | [8](https://projecteuler.net/problem=8)   | 
