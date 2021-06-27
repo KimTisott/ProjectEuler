@@ -7,9 +7,11 @@ namespace ProjectEuler
         [Arguments(3), Benchmark]
         public ulong Problem4(byte p1)
         {
-            ulong result = 0, digits = p1, max = 1, floor, limit, decrement;
+            ulong result = 0, max = 1, floor, limit, decrement;
 
-            for (ushort i = 0; i < digits; i++)
+            byte digits = p1;
+
+            for (byte i = 0; i < digits; i++)
             {
                 max *= 10;
             }

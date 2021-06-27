@@ -5,7 +5,7 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(100), Benchmark]
-        public ulong Problem6(uint p1)
+        public ulong Problem6(ushort p1)
         {
             ulong result, count = p1, sum, squaresSum;
 
