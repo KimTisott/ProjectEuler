@@ -10,8 +10,8 @@
 | [4](https://projecteuler.net/problem=4)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem4.cs) |   4,899.401 |    26.1068 |     24.4203 |           294 | -             |
 | [5](https://projecteuler.net/problem=5)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem5.cs) |     354.537 |     1.1932 |      0.9964 |            70 | -             |
 | [6](https://projecteuler.net/problem=6)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem6.cs) |       1.321 |     0.0152 |      0.0142 |            83 | -             |
-| [7](https://projecteuler.net/problem=7)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem7.cs) | 209,763.011 |   530.5348 |    470.3053 |           391 |       105,464 |
-| [8](https://projecteuler.net/problem=8)   | 
+| [7](https://projecteuler.net/problem=7)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem7.cs) | 179,788.236 | 1,001.8156 |    937.0989 |           505 |       105,464 |
+| [8](https://projecteuler.net/problem=8)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem8.cs) |   6,585.498 |   122.5329 |    102.3205 |           112 | -             |
 | [9](https://projecteuler.net/problem=9)   | 
 | [10](https://projecteuler.net/problem=10) |
 | [11](https://projecteuler.net/problem=11) |
