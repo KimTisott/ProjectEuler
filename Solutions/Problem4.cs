@@ -5,13 +5,11 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(3), Benchmark]
-        public ulong Problem4(byte p1)
+        public ulong Problem4(ulong p1)
         {
-            ulong result = 0, max = 1, floor, limit, decrement;
+            ulong result = 0, max = 1, floor, limit, decrement, digits = p1;
 
-            byte digits = p1;
-
-            for (byte i = 0; i < digits; i++)
+            for (ulong i = 0; i < digits; i++)
             {
                 max *= 10;
             }

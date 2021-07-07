@@ -5,7 +5,7 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(20), Benchmark]
-        public ulong Problem5(byte p1)
+        public ulong Problem5(ulong p1)
         {
             ulong result = 1, count = p1;
 

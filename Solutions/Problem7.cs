@@ -5,7 +5,7 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(10001), Benchmark]
-        public ulong Problem7(ushort p1)
+        public ulong Problem7(ulong p1)
         {
             ulong result, count = p1, limit = Helpers.NthPrimeUpper(count);
 

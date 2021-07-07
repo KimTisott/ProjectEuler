@@ -6,44 +6,25 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(1000), Benchmark]
-        public ulong Problem9(ushort p1)
+        public ulong Problem9(ulong p1)
         {
-            ulong result = 0, a, b, c, x, y, z;
-            
-            ushort sum = p1, limit = (ushort)Math.Sqrt(sum >> 1);
+            ulong result = 0;
 
-            for (uint i = 2; i <= limit; i++)
+            ulong a, b, c, x = p1 >> 1, min = (ulong)Math.Floor(Math.Sqrt(x >> 1)), max = (ulong)Math.Ceiling(Math.Sqrt(x));
+
+            for (ulong m = min; m <= max; m++)
             {
-                if ((sum >> 1) % i == 0)
+                ulong n = x / m - m;
+
+                a = m * m - n * n;
+
+                b = 2 * m * n;
+
+                c = m * m + n * n;
+
+                if (a + b + c == 1000)
                 {
-                    x = i + (i % 2) + 1;
-
-                    while (x < (i << 1) && x <= sum / (i << 1))
-                    {
-                        if (sum / (i << 1) % x == 0 && Helpers.GreatestCommonDivisor(x, i) > 0)
-                        {
-                            z = (ulong)(sum >> 1) / (x * i);
-
-                            y = x - i;
-
-                            a = (z * y * i) << 1;
-
-                            b = z * (i * i - y * y);
-
-                            c = z * (i * i + y * y);
-
-                            result = a * b * c;
-
-                            break;
-                        }
-
-                        x += 2;
-                    }
-                }
-
-                if (result > 0)
-                {
-                    break;
+                    return a * b * c;
                 }
             }
 
