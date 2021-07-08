@@ -5,41 +5,44 @@ namespace ProjectEuler
     public partial class Solutions
     {
         [Arguments(10001), Benchmark]
-        public ulong Problem7(ulong p1)
+        public unsafe ulong Problem7(ulong p1)
         {
             ulong result, count = p1, limit = Helpers.NthPrimeUpper(count);
 
-            byte[] sieve = new byte[limit];
+            byte[] numbers = new byte[limit];
 
             count -= 2;
 
-            for (result = 5; result <= limit; result += 4)
+            fixed (byte* sieve = &numbers[0])
             {
-                if (sieve[result] == 0)
+                for (result = 5; result <= limit; result += 4)
                 {
-                    if (--count == 0)
+                    if (sieve[result] == 0)
                     {
-                        return result;
+                        if (--count == 0)
+                        {
+                            return result;
+                        }
+
+                        for (ulong i = result * result; i <= limit; i += result)
+                        {
+                            sieve[i] = 1;
+                        }
                     }
 
-                    for (ulong i = result * result; i <= limit; i += result)
-                    {
-                        sieve[i] = 1;
-                    }
-                }
+                    result += 2;
 
-                result += 2;
-
-                if (sieve[result] == 0)
-                {
-                    if (--count == 0)
+                    if (sieve[result] == 0)
                     {
-                        return result;
-                    }
+                        if (--count == 0)
+                        {
+                            return result;
+                        }
 
-                    for (ulong i = result * result; i <= limit; i += result)
-                    {
-                        sieve[i] = 1;
+                        for (ulong i = result * result; i <= limit; i += result)
+                        {
+                            sieve[i] = 1;
+                        }
                     }
                 }
             }

@@ -9,13 +9,11 @@ namespace ProjectEuler
     {
         static void Main()
         {
-            BenchmarkRunner.Run<Solutions>();
+            //BenchmarkRunner.Run<Solutions>();
 
-            //BenchmarkRunner.Run(typeof(Solutions), typeof(Solutions).GetMethods().Where(x => x.Name.Contains("Problem2")).ToArray());
+            BenchmarkRunner.Run(typeof(Solutions), typeof(Solutions).GetMethods().Where(x => x.Name.Contains("Problem11")).ToArray());
 
             //var s = new Solutions();
-            //s.Problem9(1000);
-            //s.Problem9a(1000);
         }
     }
 
