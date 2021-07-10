@@ -56,10 +56,10 @@
 | [50](https://projecteuler.net/problem=50) |
 
 #### Legend
-ns: nanosecond (10<sup>-9<sup> s)
-B : byte
+- ns: nanosecond (10<sup>-9</sup> second)
+- B : byte
 
-Performance improvements and suggestions can be submitted [here](https://github.com/KimTisott/ProjectEuler/issues/new).
+Suggetions and performance improvements are welcome. These can be submitted [here](https://github.com/KimTisott/ProjectEuler/issues/new).
 
 ### References
 
