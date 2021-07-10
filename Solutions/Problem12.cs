@@ -7,16 +7,21 @@ namespace ProjectEuler
         [Arguments(500), Benchmark]
         public ulong Problem12(ulong p1)
         {
-            ulong result = 0, increment = 1, count = 0;
+            ulong result, number = 1;
 
-            while (count <= p1)
+            while (Helpers.DivisorCount1((number + 1) >> 1) * Helpers.DivisorCount1(number) <= p1)
             {
-                result = Helpers.NaturalNumbersSum(increment);
+                number++;
 
-                count = Helpers.DivisorCount(result);
+                if (Helpers.DivisorCount1(number >> 1) * Helpers.DivisorCount1(number + 1) > p1)
+                {
+                    break;
+                }
 
-                increment++;
+                number++;
             }
+
+            result = number * (number + 1) >> 1;
 
             return result;
         }
