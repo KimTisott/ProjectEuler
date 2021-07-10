@@ -4,9 +4,9 @@
 
 | Problem                                   | Solution                                                                         | Mean (ns)      | Error (ns)   | StdDev (ns)  | Alloc (B) | Code (B) |
 | :---------------------------------------: | :------------------------------------------------------------------------------: | -------------: | -----------: | -----------: | --------: | -------: |
-| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs)  |         16.955 |       0.2238 |       0.2093 |           |       92 |
+| [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs)  |          7.145 |       0.0464 |       0.0411 |           |      114 |
 | [2](https://projecteuler.net/problem=2)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem2.cs)  |          2.252 |       0.0358 |       0.0299 |           |       41 |
-| [3](https://projecteuler.net/problem=3)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem3.cs)  |      4,852.574 |      57.0675 |      53.3810 |           |       68 |
+| [3](https://projecteuler.net/problem=3)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem3.cs)  |      2,959.334 |       6.4148 |       5.6866 |           |      296 |
 | [4](https://projecteuler.net/problem=4)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem4.cs)  |      4,985.330 |      84.6668 |      70.7006 |           |      288 |
 | [5](https://projecteuler.net/problem=5)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem5.cs)  |        369.928 |       2.7705 |       2.5915 |           |       67 |
 | [6](https://projecteuler.net/problem=6)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem6.cs)  |          2.711 |       0.0785 |       0.0656 |           |       40 |

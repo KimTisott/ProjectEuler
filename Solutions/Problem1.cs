@@ -9,9 +9,9 @@ namespace ProjectEuler
         {
             ulong result, product = p1 * p2, limit = p3 - 1;
 
-            result = p1 * Helpers.NaturalNumbersSum(limit / p1)
-                     + p2 * Helpers.NaturalNumbersSum(limit / p2)
-                     - product * Helpers.NaturalNumbersSum(limit / product);
+            result = p1 * Helpers.NaturalNumbersSum((ulong)(limit * (1.0 / p1)))
+                     + p2 * Helpers.NaturalNumbersSum((ulong)(limit * (1.0 / p2)))
+                     - product * Helpers.NaturalNumbersSum((ulong)(limit * (1.0 / product)));
 
             return result;
         }
