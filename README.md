@@ -59,7 +59,7 @@
 - ns: nanosecond (10<sup>-9</sup> second)
 - B : byte
 
-Suggetions and performance improvements are welcome. These can be submitted [here](https://github.com/KimTisott/ProjectEuler/issues/new).
+Suggetions and performance improvements are welcome. Submit them [here](https://github.com/KimTisott/ProjectEuler/issues/new).
 
 ### References
 
