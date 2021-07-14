@@ -14,7 +14,7 @@ namespace ProjectEuler
 
             for (ulong m = min; m <= max; m++)
             {
-                ulong n = x / m - m;
+                ulong n = (ulong)(x * (1.0 / m) - m);
 
                 a = m * m - n * n;
 

@@ -10,17 +10,6 @@ namespace ProjectEuler
 		{
 			ulong result = p1;
 
-			if (result < 25)
-            {
-				for (byte i = 3; i < result; i += 2)
-                {
-					if (result % i == 0)
-                    {
-						return result;
-                    }
-                }
-            }
-
 			for (ulong counter = 5; counter * counter <= result; counter += 4)
 			{
 				if (result % counter == 0)

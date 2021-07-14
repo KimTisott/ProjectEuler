@@ -4,7 +4,7 @@
     {
         public static ulong LeastCommonMultiple(ulong a, ulong b)
         {
-            return a / GreatestCommonDivisor(a, b) * b;
+            return (ulong)(a * (1.0 / GreatestCommonDivisor(a, b)) * b);
         }
     }
 }
