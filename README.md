@@ -18,42 +18,6 @@
 | [12](https://projecteuler.net/problem=12) | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem12.cs) | 10,231,712.240 |  41,283.6572 |  38,616.7585 |           |      179 |
 | [13](https://projecteuler.net/problem=13) | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem13.cs) |      2,706.707 |      23.1532 |      20.5247 |     4,896 |    2,290 |
 | [14](https://projecteuler.net/problem=14) | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem14.cs) | 12,208,562.518 | 273,230.6109 | 738,694.8445 | 8,000,020 |      239 |
-| [15](https://projecteuler.net/problem=15) |
-| [16](https://projecteuler.net/problem=16) |
-| [17](https://projecteuler.net/problem=17) |
-| [18](https://projecteuler.net/problem=18) |
-| [19](https://projecteuler.net/problem=19) |
-| [20](https://projecteuler.net/problem=20) |
-| [21](https://projecteuler.net/problem=21) |
-| [22](https://projecteuler.net/problem=22) |
-| [23](https://projecteuler.net/problem=23) |
-| [24](https://projecteuler.net/problem=24) |
-| [25](https://projecteuler.net/problem=25) |
-| [26](https://projecteuler.net/problem=26) |
-| [27](https://projecteuler.net/problem=27) |
-| [28](https://projecteuler.net/problem=28) |
-| [29](https://projecteuler.net/problem=29) |
-| [30](https://projecteuler.net/problem=30) |
-| [31](https://projecteuler.net/problem=31) |
-| [32](https://projecteuler.net/problem=32) |
-| [33](https://projecteuler.net/problem=33) |
-| [34](https://projecteuler.net/problem=34) |
-| [35](https://projecteuler.net/problem=35) |
-| [36](https://projecteuler.net/problem=36) |
-| [37](https://projecteuler.net/problem=37) |
-| [38](https://projecteuler.net/problem=38) |
-| [39](https://projecteuler.net/problem=39) |
-| [40](https://projecteuler.net/problem=40) |
-| [41](https://projecteuler.net/problem=41) |
-| [42](https://projecteuler.net/problem=42) |
-| [43](https://projecteuler.net/problem=43) |
-| [44](https://projecteuler.net/problem=44) |
-| [45](https://projecteuler.net/problem=45) |
-| [46](https://projecteuler.net/problem=46) |
-| [47](https://projecteuler.net/problem=47) |
-| [48](https://projecteuler.net/problem=48) |
-| [49](https://projecteuler.net/problem=49) |
-| [50](https://projecteuler.net/problem=50) |
 
 #### Legend
 - ns: nanosecond (10<sup>-9</sup> second)
