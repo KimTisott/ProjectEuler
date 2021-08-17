@@ -2,6 +2,14 @@
 
 # Benchmark
 
+```
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1165 (20H2/October2020Update)
+Intel Core i5-10300H CPU 2.50GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.301
+  [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+  DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+```
+
 | Problem                                   | Solution                                                                         | Mean (ns)      | Error (ns)   | StdDev (ns)  | Alloc (B) | Code (B) |
 | :---------------------------------------: | :------------------------------------------------------------------------------: | -------------: | -----------: | -----------: | --------: | -------: |
 | [1](https://projecteuler.net/problem=1)   | [C#](https://github.com/KimTisott/ProjectEuler/blob/main/Solutions/Problem1.cs)  |          7.145 |       0.0464 |       0.0411 |           |      114 |
