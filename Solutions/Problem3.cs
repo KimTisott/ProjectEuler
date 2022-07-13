@@ -1,36 +1,36 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-
-namespace ProjectEuler
+﻿public class Problem3 : BaseSolution
 {
-	public partial class Solutions
+    [Params(600851475143)]
+    public long p1;
+
+    [Benchmark]
+	public long A()
 	{
-        [Arguments(600851475143), Benchmark]
-		public ulong Problem3(ulong p1)
+		long result = p1;
+
+		for (long counter = 5; counter * counter <= result; counter += 4)
 		{
-			ulong result = p1;
-
-			for (ulong counter = 5; counter * counter <= result; counter += 4)
+			if (result % counter == 0)
 			{
-				if (result % counter == 0)
-				{
-					result = (ulong)(result * (1.0 / counter));
-				}
-				
-				counter += 2;
-
-				if (counter * counter > result)
-                {
-					break;
-                }
-
-				if (result % counter == 0)
-				{
-					result = (ulong)(result * (1.0 / counter));
-				}
+				result /= counter;
 			}
 
-			return result;
+			counter += 2;
+
+			if (counter * counter > result)
+            {
+				break;
+            }
+
+			if (result % counter == 0)
+			{
+				result /= counter;
+			}
 		}
-	}
+
+		return result;
+    }
+
+    [Benchmark]
+    public override long Result() => 6857;
 }

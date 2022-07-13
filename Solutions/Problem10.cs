@@ -1,45 +1,46 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem10 : BaseSolution
 {
-    public partial class Solutions
+    [Params(2000000)]
+    public long p1;
+
+    [Benchmark]
+    public unsafe long A()
     {
-        [Arguments(2000000), Benchmark]
-        public unsafe ulong Problem10(ulong p1)
+        long result = 5, limit = p1;
+
+        byte[] numbers = new byte[limit];
+
+        fixed (byte* sieve = &numbers[0])
         {
-            ulong result = 5, limit = p1;
-
-            byte[] numbers = new byte[limit];
-
-            fixed (byte* sieve = &numbers[0])
+            for (long i = 5; i < limit; i += 4)
             {
-                for (ulong i = 5; i < limit; i += 4)
+                if (sieve[i] == 0)
                 {
-                    if (sieve[i] == 0)
-                    {
-                        result += i;
+                    result += i;
 
-                        for (ulong j = i * i; j < limit; j += i)
-                        {
-                            sieve[j] = 1;
-                        }
+                    for (long j = i * i; j < limit; j += i)
+                    {
+                        sieve[j] = 1;
                     }
+                }
 
-                    i += 2;
+                i += 2;
 
-                    if (sieve[i] == 0)
+                if (sieve[i] == 0)
+                {
+                    result += i;
+
+                    for (long j = i * i; j < limit; j += i)
                     {
-                        result += i;
-
-                        for (ulong j = i * i; j < limit; j += i)
-                        {
-                            sieve[j] = 1;
-                        }
+                        sieve[j] = 1;
                     }
                 }
             }
-
-            return result;
         }
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 142913828922;
 }

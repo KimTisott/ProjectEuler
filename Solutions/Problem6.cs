@@ -1,21 +1,22 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem6 : BaseSolution
 {
-    public partial class Solutions
+    [Params(100)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(100), Benchmark]
-        public ulong Problem6(ulong p1)
-        {
-            ulong result, count = p1, sum, squaresSum;
+        long result, count = p1, sum, squaresSum;
 
-            sum = Helpers.NaturalNumbersSum(count);
+        sum = Helpers.NaturalNumbersSum(count);
 
-            squaresSum = Helpers.NaturalNumbersSquaresSum(count);
+        squaresSum = Helpers.NaturalNumbersSquaresSum(count);
 
-            result = sum * sum - squaresSum;
+        result = (sum * sum) - squaresSum;
 
-            return result;
-        }
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 25164150;
 }

@@ -1,26 +1,25 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem2 : BaseSolution
 {
-    public partial class Solutions
+    [Params(4000000)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(4000000), Benchmark]
-        public ulong Problem2(ulong p1)
+        long result, previous = 2, current = 8, next;
+
+        while (current <= p1)
         {
-            ulong result, previous = 2, current = 8, next;
-
-            while (current <= p1)
-            {
-                next = previous + (current << 2);
-
-                previous = current;
-
-                current = next;
-            }
-
-            result = (previous + current - 2) >> 2;
-
-            return result;
+            next = previous + (current << 2);
+            previous = current;
+            current = next;
         }
+
+        result = (previous + current - 2) >> 2;
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 4613732;
 }

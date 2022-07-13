@@ -1,20 +1,21 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem5 : BaseSolution
 {
-    public partial class Solutions
+    [Params(20)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(20), Benchmark]
-        public ulong Problem5(ulong p1)
+        long result = 1, count = p1;
+
+        for (long i = count; i > 0; i--)
         {
-            ulong result = 1, count = p1;
-
-            for (ulong i = count; i > 0; i--)
-            {
-                result = Helpers.LeastCommonMultiple(result, i);
-            }
-
-            return result;
+            result = Helpers.LeastCommonMultiple(result, i);
         }
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 232792560;
 }

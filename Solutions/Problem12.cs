@@ -1,29 +1,30 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem12 : BaseSolution
 {
-    public partial class Solutions
+    [Params(500)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(500), Benchmark]
-        public ulong Problem12(ulong p1)
+        long result, number = 1;
+
+        while (Helpers.DivisorCount((number + 1) >> 1) * Helpers.DivisorCount(number) <= p1)
         {
-            ulong result, number = 1;
+            number++;
 
-            while (Helpers.DivisorCount1((number + 1) >> 1) * Helpers.DivisorCount1(number) <= p1)
+            if (Helpers.DivisorCount(number >> 1) * Helpers.DivisorCount(number + 1) > p1)
             {
-                number++;
-
-                if (Helpers.DivisorCount1(number >> 1) * Helpers.DivisorCount1(number + 1) > p1)
-                {
-                    break;
-                }
-
-                number++;
+                break;
             }
 
-            result = number * (number + 1) >> 1;
-
-            return result;
+            number++;
         }
+
+        result = (number * (number + 1)) >> 1;
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 76576500;
 }

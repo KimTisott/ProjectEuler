@@ -1,62 +1,63 @@
-﻿using BenchmarkDotNet.Attributes;
-
-namespace ProjectEuler
+﻿public class Problem4 : BaseSolution
 {
-    public partial class Solutions
+    [Params(3)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(3), Benchmark]
-        public ulong Problem4(ulong p1)
+        long result = 0, max = 1, floor, limit, decrement, digits = p1;
+
+        for (long i = 0; i < digits; i++)
         {
-            ulong result = 0, max = 1, floor, limit, decrement, digits = p1;
+            max *= 10;
+        }
 
-            for (ulong i = 0; i < digits; i++)
+        floor = max / 10;
+
+        max--;
+
+        if (digits % 2 == 0)
+        {
+            limit = max;
+            decrement = 1;
+        }
+        else
+        {
+            limit = max - 9;
+            decrement = 11;
+        }
+
+        for (long i = max; i > floor; i--)
+        {
+            if (i * i < result)
             {
-                max *= 10;
+                break;
             }
 
-            floor = max / 10;
-
-            max--;
-
-            if (digits % 2 == 0)
+            for (long j = limit; j > floor; j -= decrement)
             {
-                limit = max;
-                decrement = 1;
-            }
-            else
-            {
-                limit = max - 9;
-                decrement = 11;
-            }
+                long product = i * j;
 
-            for (ulong i = max; i > floor; i--)
-            {
-                if (i * i < result)
+                if (product < result)
                 {
                     break;
                 }
 
-                for (ulong j = limit; j > floor; j -= decrement)
+                if (Helpers.IsPalindrome(product))
                 {
-                    ulong product = i * j;
+                    result = product;
 
-                    if (product < result)
-                    {
-                        break;
-                    }
+                    floor = Helpers.Smallest(i, j);
 
-                    if (Helpers.IsPalindrome(product))
-                    {
-                        result = product;
-
-                        floor = Helpers.Smallest(i, j);
-
-                        break;
-                    }
+                    break;
                 }
             }
-
-            return result;
         }
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 906609;
 }

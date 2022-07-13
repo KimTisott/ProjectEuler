@@ -1,78 +1,57 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-
-namespace ProjectEuler
+﻿public class Problem14 : BaseSolution
 {
-    public partial class Solutions
+    [Params(1000000)]
+    public long p1;
+
+    [Benchmark]
+    public long A()
     {
-        [Arguments(1000000), Benchmark]
-        public ulong Problem14(ulong p1)
+        long result = 0, sequence;
+
+        long sequenceLength = 0;
+
+        long[] cache = new long[p1 + 1];
+
+        for (int i = 0; i < cache.Length; i++)
         {
-            ulong result = 0, sequence;
-            
-            long sequenceLength = 0;
+            cache[i] = -1;
+        }
 
-            long[] cache = new long[p1 + 1];
+        cache[1] = 1;
 
-            for (int i = 0; i < cache.Length; i++)
+        for (long i = 2; i <= p1; i++)
+        {
+            sequence = i;
+
+            ushort j = 0;
+
+            while (sequence != 1 && sequence >= i)
             {
-                cache[i] = -1;
-            }
+                j++;
 
-            cache[1] = 1;
-
-            for (ulong i = 2; i <= p1; i++)
-            {
-                sequence = i;
-
-                ushort j = 0;
-
-                while (sequence != 1 && sequence >= i)
+                if ((sequence % 2) == 0)
                 {
-                    j++;
-
-                    if ((sequence % 2) == 0)
-                    {
-                        sequence = sequence / 2;
-                    }
-                    else
-                    {
-                        sequence = sequence * 3 + 1;
-                    }
+                    sequence /= 2;
                 }
-
-                cache[i] = (short)(j + cache[sequence]);
-
-
-                if (cache[i] > sequenceLength)
+                else
                 {
-                    sequenceLength = cache[i];
-
-                    result = i;
+                    sequence = (sequence * 3) + 1;
                 }
             }
 
-            return result;
-        }
+            cache[i] = (short)(j + cache[sequence]);
 
-        //[Arguments(1000000), Benchmark]
-        public ulong Problem14a(ulong p1)
-        {
-            ulong result = 0, power = 0, exponentiation = 0;
-
-            List<ulong> powers = new List<ulong>();
-
-            while (exponentiation < p1)
+            if (cache[i] > sequenceLength)
             {
-                exponentiation = (ulong)Math.Pow(2, power);
+                sequenceLength = cache[i];
 
-                powers.Add(exponentiation);
-
-                power++;
+                result = i;
             }
-
-            return result;
         }
+
+        return result;
     }
+
+    [Benchmark]
+    public override long Result() => 837799;
 }
